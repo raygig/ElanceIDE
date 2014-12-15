@@ -65,6 +65,26 @@ var ide = function(ideObject) {
     */
     
     var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
+    editor.setTheme("ace/theme/chome");
     editor.getSession().setMode("ace/mode/javascript");
+    
+    /*
+    -------------------------------------------------------------------------
+            Real time testing
+    -------------------------------------------------------------------------
+    */
+    
+    $("<object data=\"test.html\" type=\"text/html\"><p>This is the fallback code!</p></object>").appendTo(this.testing);
+    
+    /*
+    -------------------------------------------------------------------------
+            Convert to pixles
+    -------------------------------------------------------------------------
+    */
+    
+    $(this.fileBrowser).width($(this.fileBrowser).width());//This puts out percentage into pixles
+    $(this.editor).width($(this.editor).width()-2);
+        $(this.editor).css("left",$(this.fileBrowser).width()+2);
+    $(this.testing).width($(this.testing).width());
+        $(this.testing).css("left",$(this.fileBrowser).width()+$(this.editor).width());
 };
