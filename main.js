@@ -87,4 +87,9 @@ var ide = function(ideObject) {
         $(this.editor).css("left",$(this.fileBrowser).width()+2);
     $(this.testing).width($(this.testing).width());
         $(this.testing).css("left",$(this.fileBrowser).width()+$(this.editor).width());
+        
+    //TODO: Add resizing windows
+    //TODO: Real time testing
+    //TODO: Toggle windows on and off
+    //TODO: Make it look nicer
 };
